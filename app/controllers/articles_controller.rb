@@ -6,6 +6,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @content = Kramdown::Document.new(@article.content).to_html.html_safe
   end
 
   def new
