@@ -1,5 +1,10 @@
 <h1><%= @article.id %>: <%= @article.title%></h1>
-<%= @content %>
+
+<div id="editor">
+  <%= @content %>
+</div>
+
+
 
 <p>Created at: <%= @article.created_at %></p>
 <%= button_to "Go back", articles_path, method: :get %>
